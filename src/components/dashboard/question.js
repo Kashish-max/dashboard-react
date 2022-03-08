@@ -40,7 +40,7 @@ export const Question = (props) => {
             size="small"
             sx={{ color: '#438AF6', fontWeight: '600'}}
           >
-            07/15
+            {props.score}/15
           </Box>
         )}
       />
