@@ -8,7 +8,7 @@ export const Syllabus = (props) => {
       <CardHeader
         title="Syllabus wise Analysis"
       />
-      <CardContent>
+      <CardContent sx={{pt: 0}}>
         <Box
           sx={{
             height: 200,

@@ -183,7 +183,7 @@ function Dashboard() {
               <CardContent sx={{ px: 0 }}>
                 <Box>
                   <ol style={{ listStyle: 'none' }}>
-                    {ModalList.map((el) => {
+                    {ModalList.map((el,index) => {
                       return (
                       <li style={{ display: "flex", justifyContent: "space-between", margin: "30px 0" }}>
                         <Box sx={{ display: "flex" }}>
@@ -195,7 +195,7 @@ function Dashboard() {
                               mr: 3,
                             }}
                           >
-                            1
+                           {index+1}
                           </Avatar>
                           <div>Update your <span>{el.title}</span></div>
                         </Box>
