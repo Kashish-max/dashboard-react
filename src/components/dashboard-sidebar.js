@@ -11,12 +11,12 @@ import { NavItem } from './nav-item';
 
 const items = [
   {
-    href: '/',
+    href: '/dashboard',
     icon: (<DashboardIcon fontSize="small" />),
     title: 'Dashboard'
   },
   {
-    href: '/skill-test',
+    href: '/',
     icon: (<BatchIcon fontSize="small" />),
     title: 'Skill Test'
   },
@@ -58,28 +58,12 @@ export const DashboardSidebar = (props) => {
         }}
       >
         <div>
-          <Box
-            sx={{
-              height: '90px',
-              px: 6,
-              display: 'flex',
-              alignItems: 'center',
-              borderRight: '1px solid #fff'
-            }}>
-            <NextLink
-              href="/"
-              passHref
-            >
-              <a>
-                <Logo
-                  sx={{
-                    height: 42,
-                    width: 42
-                  }}
-                />
-              </a>
-            </NextLink>
-          </Box>
+        <Logo
+          sx={{
+            height: 42,
+            width: 42
+          }}
+        />
         </div>
         <Divider
           sx={{

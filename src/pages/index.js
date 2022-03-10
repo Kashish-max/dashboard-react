@@ -166,8 +166,17 @@ function Dashboard() {
               height: '100%',          
           }}>
             <Card sx={{
-              width: '50%',
-              px: 6,
+              width: {
+                lg: '50%',
+                md: '70%',
+                sm: '90%',
+              },
+              px: {
+                lg: 6,
+                md: 4,
+                sm: 3,
+                xs: 2
+              },
               py: 1,
             }}>
               <CardHeader
