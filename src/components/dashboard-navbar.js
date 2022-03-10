@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { AppBar, Avatar, Box, IconButton, Toolbar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { UserCircle as UserCircleIcon } from '../icons/user-circle';
-import NextLink from 'next/link';
 import { Logo } from './logo';
 
 const DashboardNavbarRoot = styled(AppBar)(({ theme }) => ({
@@ -20,11 +19,7 @@ export const DashboardNavbar = (props) => {
     <>
       <DashboardNavbarRoot
         sx={{
-          left: {
-            // lg: 280
-          },
           width: {
-            // lg: 'calc(100% - 280px)'
             lg: 'calc(100%)'
           },
           zIndex: {
@@ -52,12 +47,24 @@ export const DashboardNavbar = (props) => {
           >
             <MenuIcon fontSize="small" />
           </IconButton>
-          <Logo
+          <Box
             sx={{
-              height: 42,
-              width: 42
-            }}
-          />
+              height: '90px',
+              px: 6,
+              display: {
+                lg: 'flex',
+                xs: 'none'
+              },
+              alignItems: 'center',
+          }}>
+
+            <Logo
+              sx={{
+                height: 42,
+                width: 42,
+              }}
+            />
+          </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Box
             sx={{

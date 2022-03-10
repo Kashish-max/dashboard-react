@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
-import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
 import { Box, Divider, Drawer, useMediaQuery } from '@mui/material';
 import { DashboardIcon } from '../icons/dashboard-logo';
 import { FileIcon } from '../icons/file-logo';
@@ -58,12 +56,21 @@ export const DashboardSidebar = (props) => {
         }}
       >
         <div>
-        <Logo
-          sx={{
-            height: 42,
-            width: 42
-          }}
-        />
+          <Box
+            sx={{
+              height: '90px',
+              px: 6,
+              display: 'flex',
+              alignItems: 'center',
+            }}>
+
+              <Logo
+                sx={{
+                  height: 42,
+                  width: 42,
+                }}
+              />
+            </Box>
         </div>
         <Divider
           sx={{
@@ -122,9 +129,4 @@ export const DashboardSidebar = (props) => {
       {content}
     </Drawer>
   );
-};
-
-DashboardSidebar.propTypes = {
-  onClose: PropTypes.func,
-  open: PropTypes.bool
 };
