@@ -20,7 +20,7 @@ export function TasksProgress(props) {
   ]
 
   return (
-    <Card>
+    <Card {...props}>
       <CardContent>
         <Box sx={{
           fontSize: 16,

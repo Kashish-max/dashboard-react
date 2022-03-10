@@ -2,7 +2,7 @@ import { Box, Card, CardContent, Grid, Typography, Button } from '@mui/material'
 
 export function Skill (props) {
   return (
-    <Card>
+    <Card {...props}>
       <CardContent>
         <Grid
           container

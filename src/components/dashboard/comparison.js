@@ -103,7 +103,7 @@ export const Comparison = (props) => {
   }
 
   return (
-    <Card>
+    <Card {...props}>
       <CardHeader
         title="Comparison Graph"
         sx={{pb: 0}}

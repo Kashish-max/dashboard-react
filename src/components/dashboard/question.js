@@ -31,7 +31,7 @@ export const Question = (props) => {
   }
 
   return (
-    <Card>
+    <Card {...props}>
       <CardHeader
         title="Question Analysis"
         sx={{pb: 0}}
