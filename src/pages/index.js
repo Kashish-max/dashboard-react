@@ -15,10 +15,6 @@ function Dashboard() {
   const [percentile, setPercentile] = useState(37);
   const [score, setScore] = useState(7);
 
-  const [rankCounter, setRankCounter] = useState(12890);
-  const [percentileCounter, setPercentileCounter] = useState(37);
-  const [scoreCounter, setScoreCounter] = useState(7);
-
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -26,44 +22,6 @@ function Dashboard() {
   const handleClose = () => {
     setOpen(false);  
   };
-
-  const SaveModalValues = () => {
-    setRank(rankCounter)
-    setPercentile(percentileCounter)
-    setScore(scoreCounter)
-    handleClose();
-  }
-
-  const ModalList = [
-    {
-      title: "rank",
-      value: rankCounter,
-      increment: () => setRankCounter(rankCounter + 1),
-      decrement: () => {
-        if(rankCounter>1) setRankCounter(rankCounter - 1)
-      },
-    },
-    {
-      title: "percentile",
-      value: percentileCounter,
-      increment: () => {
-        if(percentileCounter<100) setPercentileCounter(percentileCounter + 1)
-      },
-      decrement: () => {
-        if(percentileCounter>0) setPercentileCounter(percentileCounter - 1)
-      }
-    },
-    {
-      title: "current score",
-      value: scoreCounter,
-      increment: () => {
-        if(scoreCounter<15) setScoreCounter(scoreCounter + 1)
-      },
-      decrement: () => {
-        if(scoreCounter>0) setScoreCounter(scoreCounter - 1)
-      },
-    }
-  ]
 
   return (
     <>
@@ -141,7 +99,6 @@ function Dashboard() {
         </Container>
         <UpdateModal
           open={open}
-          handleOpen={handleOpen}
           handleClose={handleClose}
           setRank={setRank}
           setPercentile={setPercentile}

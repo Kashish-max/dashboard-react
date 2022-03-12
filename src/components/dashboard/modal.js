@@ -6,7 +6,7 @@ function UpdateModal(props) {
   const [percentileCounter, setPercentileCounter] = useState(37);
   const [scoreCounter, setScoreCounter] = useState(7);
   
-  const { open, handleOpen, handleClose, setRank, setPercentile, setScore } = props;
+  const { open, handleClose, setRank, setPercentile, setScore } = props;
     
   const SaveModalValues = () => {
     setRank(rankCounter)

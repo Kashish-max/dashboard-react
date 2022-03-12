@@ -17,17 +17,7 @@ export const DashboardNavbar = (props) => {
 
   return (
     <>
-      <DashboardNavbarRoot
-        sx={{
-          width: {
-            lg: 'calc(100%)'
-          },
-          zIndex: {
-            lg: 1300,
-            md: 1100
-          },
-        }}
-        >
+      <DashboardNavbarRoot>
         <Toolbar
           disableGutters
           sx={{
