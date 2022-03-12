@@ -14,7 +14,7 @@ export const Question = (props) => {
           labels: ['Score','']
       },
       options: {
-
+cutoutPercentage: 10,
           cutoutPercentage: 0,
           layout: { padding: 0 },
           plugins: {

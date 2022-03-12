@@ -30,21 +30,13 @@ export const DashboardSidebar = (props) => {
   const router = useRouter();
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'), {
     defaultMatches: true,
-    noSsr: false
   });
 
-  useEffect(
-    () => {
-      if (!router.isReady) {
-        return;
-      }
-
+  useEffect(() => {
       if (open) {
-        onClose?.();
+        onClose();
       }
-    },
-    [router.asPath]
-  );
+    },[router.asPath]);
 
   const content = (
     <>
@@ -96,7 +88,6 @@ export const DashboardSidebar = (props) => {
     return (
       <Drawer
         anchor="left"
-        open
         PaperProps={{
           sx: {
             backgroundColor: '#fff',

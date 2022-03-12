@@ -13,7 +13,7 @@ const App = (props) => {
       <>
         <Head>
           <title>
-            Material Kit Pro
+            Material Kit Dashboard
           </title>
           <meta
             name="viewport"
